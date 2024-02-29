@@ -11,7 +11,12 @@ return {
       callback = function(event)
         local fzf = require('fzf-lua')
         local map = function(keys, func, desc)
-          vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+          vim.keymap.set(
+            'n',
+            keys,
+            func,
+            { buffer = event.buf, desc = 'LSP: ' .. desc }
+          )
         end
 
         -- Jump to the definition of the word under your cursor.
@@ -38,7 +43,7 @@ return {
         -- WARN: This is not Goto Definition, this is Goto Declaration.
         --  For example, in C this would take you to the header
         map('gD', fzf.lsp_declarations, '[G]oto [D]eclaration')
-      end
+      end,
     })
 
     local capabilities = vim.tbl_deep_extend(
@@ -47,6 +52,7 @@ return {
       require('cmp_nvim_lsp').default_capabilities()
     )
 
+    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
     local servers = {
       lua_ls = {
         settings = {
@@ -60,6 +66,11 @@ return {
               },
             },
           },
+          tsserver = {},
+
+          -- Ruby
+          solargraph = {},
+          rubocop = {},
         },
       },
     }
@@ -79,10 +90,15 @@ return {
             cmd = server.cmd,
             settings = server.settings,
             filetypes = server.filetypes,
-            capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {}),
+            capabilities = vim.tbl_deep_extend(
+              'force',
+              {},
+              capabilities,
+              server.capabilities or {}
+            ),
           })
         end,
       },
     })
-  end
+  end,
 }
