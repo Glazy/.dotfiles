@@ -29,11 +29,11 @@ return {
         -- Jump to the type of the word under your cursor.
         --  Useful when you're not sure what type a variable is and you want to see
         --  the definition of its *type*, not where it was *defined*.
-        map('<leader>D', fzf.lsp_typedefs, 'Type [D]efinition')
+        map('gt', fzf.lsp_typedefs, '[G]oto [T]ype')
 
         -- Opens a popup that displays documentation about the word under your cursor
         --  See `:help K` for why this keymap
-        map('K', vim.lsp.buf.hover, 'Hover Documentation')
+        map('gh', vim.lsp.buf.hover, 'Hover Documentation')
 
         -- WARN: This is not Goto Definition, this is Goto Declaration.
         --  For example, in C this would take you to the header
