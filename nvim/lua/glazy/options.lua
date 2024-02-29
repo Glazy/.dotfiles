@@ -6,6 +6,9 @@ vim.g.maplocalleader = ' '
 vim.opt.number = true
 vim.wo.relativenumber = true
 
+-- Add "max line length" line
+vim.opt.colorcolumn = '80'
+
 -- Enable mouse mode
 vim.opt.mouse = 'a'
 
@@ -44,4 +47,3 @@ vim.opt.cursorline = true
 
 -- Minimum number of lines to be kept above/below cursor
 vim.opt.scrolloff = 10
-
