@@ -7,5 +7,5 @@ return {
     wk.register({
       f = { name = 'Find' },
     }, { prefix = '<leader>' })
-  end
+  end,
 }
