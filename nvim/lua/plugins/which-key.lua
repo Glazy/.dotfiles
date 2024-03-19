@@ -6,6 +6,7 @@ return {
 
     wk.register({
       f = { name = 'Find' },
+      g = { name = 'Git' },
     }, { prefix = '<leader>' })
   end,
 }
