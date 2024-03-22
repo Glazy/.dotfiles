@@ -91,6 +91,12 @@ return {
       require('mason-lspconfig').setup({
         handlers = {
           function(server_name)
+            -- NOTE: We don't want mason-lspconfig to autosetup tsserver for us
+            -- because we are using typescript-tools.nvim instead.
+            if server_name == 'tsserver' then
+              return
+            end
+
             local server = servers[server_name] or {}
             require('lspconfig')[server_name].setup({
               cmd = server.cmd,
