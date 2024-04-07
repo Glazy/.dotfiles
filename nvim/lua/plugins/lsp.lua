@@ -73,12 +73,12 @@ return {
                 },
               },
             },
-
-            -- Ruby
-            solargraph = {},
-            rubocop = {},
           },
         },
+
+        -- Ruby
+        solargraph = {},
+        rubocop = {},
       }
 
       require('mason').setup()
