@@ -10,9 +10,11 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
  export NVM_DIR=~/.nvm
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-
 # Aliases
 alias doots="cd ~/.dotfiles && nvim ."
+
+# Mise
+eval "$(~/.local/bin/mise activate zsh)"
 
 # Enable Starship
 eval "$(starship init zsh)"
