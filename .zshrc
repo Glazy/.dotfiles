@@ -16,6 +16,9 @@ alias doots="cd ~/.dotfiles && nvim ."
 # Mise
 eval "$(~/.local/bin/mise activate zsh)"
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
 # Enable Starship
 eval "$(starship init zsh)"
 
