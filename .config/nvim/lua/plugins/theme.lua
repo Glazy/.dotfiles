@@ -1,8 +1,9 @@
 return {
-  'sainnhe/everforest',
+  'catppuccin/nvim',
+  name = 'cappuccin',
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd([[colorscheme everforest]])
+    vim.cmd([[colorscheme catppuccin-macchiato]])
   end,
 }
