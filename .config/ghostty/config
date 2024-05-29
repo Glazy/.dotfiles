@@ -1,0 +1,9 @@
+## Appearance
+theme = catppuccin-macchiato
+mouse-hide-while-typing = true
+
+## Fonts
+font-family = Berkeley Mono
+font-size = 16
+font-thicken = true
+adjust-cell-height = 80%
