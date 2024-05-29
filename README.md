@@ -1,12 +1,22 @@
-# Dotfiles
+# .dotfiles
 
-## Prerequisites
+My configuration files managed by GNU Stow.
 
-### macOS
-
-`brew install stow starship zsh-syntax-highlighting zsh-autosuggestions`
+Feel free to use or take inspiration from any of my config files, no attribution
+required.
 
 ## Setup
 
-1. `git clone git@github.com:Glazy/.dotfiles.git`
-2. `cd ~/.dotfiles && stow .`
+### macOS
+
+Install the tools:
+
+`brew install stow tmux starship neovim`
+
+Clone [TPM](https://github.com/tmux-plugins/tpm)
+
+Install ZSH plugins:
+
+`brew install zsh-syntax-highlighting zsh-autosuggestions`
+
+Run `stow .` in `~/.dotfiles`
