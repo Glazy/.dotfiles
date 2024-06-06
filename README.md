@@ -2,9 +2,6 @@
 
 My configuration files managed by GNU Stow.
 
-Feel free to use or take inspiration from any of my config files, no attribution
-required.
-
 ## Setup
 
 ### macOS
@@ -19,4 +16,4 @@ Install ZSH plugins:
 
 `brew install zsh-syntax-highlighting zsh-autosuggestions`
 
-Run `stow .` in `~/.dotfiles`
+Run `stow <package_name>` in `~/.dotfiles` to install any needed configuration.
