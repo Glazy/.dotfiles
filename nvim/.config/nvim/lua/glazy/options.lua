@@ -8,6 +8,7 @@ vim.wo.relativenumber = true
 
 -- Set default indent width
 vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 
 -- Add "max line length" line
 vim.opt.colorcolumn = '80'
