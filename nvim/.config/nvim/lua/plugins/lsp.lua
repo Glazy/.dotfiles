@@ -89,6 +89,8 @@ return {
       })
 
       require('mason-lspconfig').setup({
+        ensure_installed = ensure_installed,
+        automatic_installation = false,
         handlers = {
           function(server_name)
             -- NOTE: We don't want mason-lspconfig to autosetup tsserver for us
