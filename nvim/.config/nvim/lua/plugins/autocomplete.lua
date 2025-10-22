@@ -2,7 +2,11 @@ return {
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
-    { 'L3MON4D3/LuaSnip', build = 'make install_jsregexp' },
+    {
+      'L3MON4D3/LuaSnip',
+      version = 'v2.*',
+      build = 'make install_jsregexp',
+    },
     'saadparwaiz1/cmp_luasnip',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
@@ -17,7 +21,7 @@ return {
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
-        end
+        end,
       },
       completion = { completeopt = 'menu,menuone,noinsert' },
       mapping = cmp.mapping.preset.insert({
@@ -25,12 +29,12 @@ return {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-l>'] = cmp.mapping(function ()
+        ['<C-l>'] = cmp.mapping(function()
           if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           end
         end, { 'i', 's' }),
-        ['<C-h>'] = cmp.mapping(function ()
+        ['<C-h>'] = cmp.mapping(function()
           if luasnip.locally_jumpable(-1) then
             luasnip.jump(-1)
           end
@@ -42,5 +46,5 @@ return {
         { name = 'path' },
       },
     })
-  end
+  end,
 }
